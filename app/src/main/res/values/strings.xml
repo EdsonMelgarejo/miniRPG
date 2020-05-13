@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">miniRPG</string>
+    <string name="hint_name">Tu Nombre</string>
+    <string name="btn_ready">Empezar Combate</string>
+    <string name="lbl_monster">Rey Demonio</string>
+    <string name="btn_attack">Ataque</string>
+    <string name="btn_ulti">Ultimate</string>
+    <string name="btn_heal">Curación</string>
+</resources>

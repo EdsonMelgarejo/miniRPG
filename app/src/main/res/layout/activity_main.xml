@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint= "Tu nombre (Obligatorio)"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_ready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:onClick="ready"
+        android:text="@string/btn_ready"
+        android:textColor="@color/btn_ready_text"
+        android:background="@color/btn_ready_back"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_combat"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lbl_hero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hero"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/hero_name"
+            />
+
+        <ProgressBar
+            android:id="@+id/bar_hero"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="100"
+            android:progressTint="@color/hero_bar" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_monster"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            />
+
+        <ProgressBar
+            android:id="@+id/bar_monster"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="#AF0808"
+            android:max="100"
+            android:progress="100" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <Button
+                android:id="@+id/btn_attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_attack"
+                android:layout_toLeftOf="@+id/btn_ulti"
+                android:onClick="attack"
+                android:textColor="@color/btn_attack_text"
+                android:background="@color/btn_attack_back"
+                />
+
+            <Button
+                android:id="@+id/btn_ulti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_ulti"
+                android:layout_centerHorizontal="true"
+                android:onClick="ultimate"
+                android:textColor="@color/btn_ulti_text"
+                android:background="@color/btn_ulti_back"
+                />
+
+            <Button
+                android:id="@+id/btn_heal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_heal"
+                android:layout_toRightOf="@+id/btn_ulti"
+                android:onClick="heal"
+                android:textColor="@color/btn_heal_text"
+                android:background="@color/btn_heal_back"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/lbl_log"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Log"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lbl_finalMessage"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        />
+
+
+</LinearLayout>
