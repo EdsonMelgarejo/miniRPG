@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">miniRPG</string>
+    <string name="app_name">MiniRPG</string>
     <string name="hint_name">Tu Nombre</string>
-    <string name="btn_ready">Empezar Combate</string>
+    <string name="btn_ready">Combatir</string>
     <string name="lbl_monster">Rey Demonio</string>
     <string name="btn_attack">Ataque</string>
     <string name="btn_ulti">Ultimate</string>
